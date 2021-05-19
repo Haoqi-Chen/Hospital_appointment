@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/Personal/Personal",
+    "pages/Bind/Bind",
+    "pages/Appointment/Appointment",
+    "pages/Record/Record"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#7CFC00",
+    "navigationBarTitleText": "综合门诊部体检预约小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#BFBFBF",
+    "selectedColor": "#2C2C2C",
+    "list": [
+      {
+        "pagePath": "pages/Appointment/Appointment",
+        "text": "预约查询",
+        "iconPath": "images/Search_0.png",
+        "selectedIconPath": "images/Search_1.png"
+      },
+      {
+        "pagePath": "pages/Personal/Personal",
+        "text": "个人中心",
+        "iconPath": "images/Personal_0.png",
+        "selectedIconPath": "images/Personal_1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap1.json"
+}

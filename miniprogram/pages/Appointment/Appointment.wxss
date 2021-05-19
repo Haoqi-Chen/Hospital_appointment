@@ -1,0 +1,51 @@
+/* miniprogram/pages/Appointment/Appointment.wxss */
+.SearchList {
+  display: flex;
+  padding: 8px;
+  justify-content: space-between;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+
+.Class_Appointment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 75px;
+}
+
+.picker {
+  margin-top: 20rpx;
+  font-size: 34rpx;
+  line-height: 40rpx;
+  color: #666;
+}
+
+.headline {
+  margin-top: 20rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #555;
+  line-height: 40rpx;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 1
+}
+
+.background {
+  background: linear-gradient(white, skyblue);
+  width: 100%;
+  height: 100%;
+  background-size: 100%, 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  filter: blur(10rpx);
+  z-index: 0;
+}

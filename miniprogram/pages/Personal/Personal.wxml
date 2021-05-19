@@ -1,0 +1,32 @@
+<view class="Personal">
+
+
+  <!-----------------------------用户头像的获取--------------------------->
+  <view class="userinfo">
+    <block wx:if="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile" type="primary"> 获取微信头像 </button>
+      <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo" type="primary"> 获取微信头像 </button>
+    </block>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+    </block>
+  </view>
+
+
+  <!-------------依据Personal.js中的state去判断显示绑定、取消按钮---------------->
+  <view wx:if="{{1==state}}" class="btn">
+    <button bindtap="cancelBind" class="Text">取消绑定</button>
+  </view>
+  <view wx:else class="btn">
+    <button bindtap="Binding" class="Text">绑定按钮</button>
+  </view>
+
+
+  <!--------只有绑定状态才会显示查询预约信息功能------->
+  <view wx:if="{{1==state}}" class="btn">
+    <button bindtap="Record" class="Text">查询历史预约信息</button>
+  </view>
+
+
+
+</view>

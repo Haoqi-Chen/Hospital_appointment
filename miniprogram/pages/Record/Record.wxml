@@ -1,0 +1,39 @@
+<view class="table">
+
+
+  <!-- 标签部分 -->
+  <view class="thead">
+    <view class="tr">
+      <view class="th">日期</view>
+      <view class="th" style="width: 50px">序号</view>
+      <view class="th" style="width: 75px">状态</view>
+      <view class="th">操作</view>
+      <view class="th">体检信息</view>
+    </view>
+  </view>
+
+
+  <!-- 内容部分 -->
+  <view class="tbody">
+    <view class="box">
+      <view wx:for="{{records}}">
+        <view class="tr">
+          <view class="td">{{item.date}}</view>
+          <view class="td" style="width: 50px">{{item.appointId}}</view>
+          <view class="td" style="width: 75px">{{item.state}}</view>
+          <!-- 取消预约部分的逻辑 -->
+          <view class="td" wx:if="{{item.icon}}">
+            <button type="warn" bindtap="cancelAppoint" data-id="{{item.id}}">取消预约</button>
+          </view>
+          <view class="td" wx:else>
+            <button type="warn" disabled="true" plain="true" bindtap="cancelAppoint" data-id="{{item.id}}">取消预约</button>
+          </view>
+          <!-- 体检结果 -->
+          <view class="td">
+            <button type="primary" bindtap="RESULT" data-id="{{item.id}}">体检结果</button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

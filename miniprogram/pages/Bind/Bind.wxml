@@ -1,0 +1,75 @@
+<!--pages/Bind/Bind.wxml-->
+<view class="Back">
+
+
+
+  <!-- 姓名，设置了20的最大字长 -->
+  <view class="Input">
+    姓名:<input type="text" maxlength="20" bindinput="bindKeyInputName" placeholder="请输入姓名" class="input-content"></input>
+  </view>
+  <!-- 横线 -->
+  <view class="line"></view>
+
+
+
+  <!-- 性别 -->
+  <view class="Input">
+    性别：
+    <radio-group bindchange="radioChange" class="radiogroup">
+      <view class="radiobox" wx:for="{{gender}}" wx:key="value">
+        <radio value="{{item.id}}" color="#33ff66" checked="{{item.checked}}" />
+        <view>{{item.value}}</view>
+      </view>
+    </radio-group>
+  </view>
+  <!-- 横线 -->
+  <view class="line"></view>
+
+
+
+  <!-- 工号，最大字长5号 -->
+  <view class="Input">
+    工号:<input type="number" maxlength="5" bindinput="bindKeyInputCardID" placeholder="请输入工号"
+      class="input-content"></input>
+  </view>
+  <!-- 横线 -->
+  <view class="line"></view>
+
+
+
+  <!-- 部门，最大字长30 -->
+  <view class="Input">
+    部门:<input type="text" maxlength="30" bindinput="bindKeyInputCompany" placeholder="请输入部门"
+      class="input-content"></input>
+  </view>
+  <!-- 横线 -->
+  <view class="line"></view>
+
+
+
+  <!-- 身份证号，卡死18位字节 -->
+  <view class="Input">
+    身份证号:<input type="idcard" maxlength="18" bindinput="bindKeyInputID" placeholder="请输入身份证号"
+      class="input-content2"></input>
+  </view>
+  <!-- 横线 -->
+  <view class="line"></view>
+
+
+
+  <!-- 电话，字长11-->
+  <view class="Input">
+    电话:<input type="number" maxlength="11" bindinput="bindKeyInputPhone" placeholder="请输入联系电话"
+      class="input-content"></input>
+  </view>
+  <!-- 横线 -->
+  <view class="line"></view>
+
+
+
+  <!-- 绑定按钮，成功后返回上一页 -->
+  <button bindtap="binds" type="primary" class="btn">绑定</button>
+
+
+
+</view>
